@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outlet_update_nav_graph"
+    app:startDestination="@id/outletUpdateFragment">
+
+    <fragment
+        android:id="@+id/outletUpdateFragment"
+        android:name="com.example.coffeeproject.ui.outletactivity.OutletListFragment"
+        android:label="Outlet Update" >
+        <action
+            android:id="@+id/action_outletUpdateFragment_to_outletRegistrationFragment"
+            app:destination="@id/outletRegistrationFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/outletRegistrationFragment"
+        android:name="com.example.coffeeproject.ui.outletregistration.OutletRegistrationFragment"
+        android:label="Outlet Update" >
+        <action
+            android:id="@+id/action_outletRegistrationFragment_to_pictureFragment"
+            app:destination="@id/pictureFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/pictureFragment"
+        android:name="com.example.coffeeproject.ui.outletregistration.FragmentPicture"
+        android:label="Outlet Update" >
+    </fragment>
+</navigation>

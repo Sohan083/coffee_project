@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_16sdp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:background="@color/coffe_red"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView"
+                    android:layout_width="@dimen/banner_image_width"
+                    android:layout_height="@dimen/banner_image_height"
+                    android:background="@drawable/ic_retail_blue"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outlet's Name"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+            <EditText
+                android:id="@+id/outlet_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="ex: Gloria Jeans"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <TextView
+                android:id="@+id/textView191"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Outlet's Type"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/outlet_name" />
+
+            <RadioGroup
+                android:id="@+id/type_radio_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView191">
+
+                <RadioButton
+                    android:id="@+id/chain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:text="Chain"
+                    android:buttonTint="@color/coffe_red"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/single"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_100sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="Single"
+                    android:buttonTint="@color/coffe_red"
+                    android:textColor="@color/black" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select Area"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/type_radio_group" />
+
+            <RelativeLayout
+                android:id="@+id/spinner_area_relativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_marginTop="8dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_lay"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29">
+
+                <Spinner
+                    android:id="@+id/spinner_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/ic_dropdown"
+                    android:backgroundTint="@color/coffe_red" />
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Outlet's Address"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_area_relativeLayout" />
+
+            <EditText
+                android:id="@+id/outlet_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="ex: 43A ,11Rd, Uttara Sector 3"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Contact Person's Name"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/outlet_address" />
+
+            <EditText
+                android:id="@+id/outlet_contact_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="ex: Md Rakib Hossain"
+                android:textColor="@color/skitto_ash_black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView411"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Contact Person's Designation"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/outlet_contact_person" />
+
+            <RelativeLayout
+                android:id="@+id/spinner_contact_designation_relativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_marginTop="8dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_lay"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView411">
+
+                <Spinner
+                    android:id="@+id/spinner_contact_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/ic_dropdown"
+                    android:backgroundTint="@color/coffe_red" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Contact Person's Phone Number"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_contact_designation_relativeLayout" />
+
+            <EditText
+                android:id="@+id/contact_person_mobile_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="01xxxxxxxxx"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Same as Contact Person? "
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintBottom_toBottomOf="@+id/sameAsChk"
+                app:layout_constraintStart_toStartOf="@+id/contact_person_mobile_number"
+                app:layout_constraintTop_toTopOf="@+id/sameAsChk" />
+
+            <CheckBox
+                android:id="@+id/sameAsChk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:buttonTint="@color/coffe_red"
+                app:layout_constraintBottom_toTopOf="@+id/textView413"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/contact_person_mobile_number" />
+
+            <TextView
+                android:id="@+id/textView413"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Decisions Maker's Name"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sameAsChk" />
+
+            <EditText
+                android:id="@+id/outlet_decision_maker_person"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="ex: Md Rakib Hossain"
+                android:textColor="@color/skitto_ash_black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView413" />
+
+            <TextView
+                android:id="@+id/textView412"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Decision Maker's Designation"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/outlet_decision_maker_person" />
+
+            <RelativeLayout
+                android:id="@+id/spinner_decision_maker_designation_relativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_marginTop="8dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_lay"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView412">
+
+                <Spinner
+                    android:id="@+id/spinner_decision_designation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/ic_dropdown"
+                    android:backgroundTint="@color/coffe_red" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView311"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Decision Maker's Phone Number"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_decision_maker_designation_relativeLayout" />
+
+            <EditText
+                android:id="@+id/decision_maker_mobile_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="01xxxxxxxxx"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView311" />
+
+            <TextView
+                android:id="@+id/textView312"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Communication Email"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/decision_maker_mobile_number" />
+
+            <EditText
+                android:id="@+id/contact_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="name@gmail.com"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView312" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/service_time_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contact_email">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Off Days"
+                    android:textColor="@color/coffe_red"
+                    android:textSize="@dimen/text_label_tittle_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/chk_saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/check_box_size"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:buttonTint="@color/coffe_red"
+                    android:text="Saturday"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <CheckBox
+                    android:id="@+id/chk_sunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/check_box_size"
+                    android:buttonTint="@color/coffe_red"
+                    android:text="Sunday"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/chk_saturday"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_saturday" />
+
+                <CheckBox
+                    android:id="@+id/chk_monday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/check_box_size"
+                    android:buttonTint="@color/coffe_red"
+                    android:text="Monday"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/chk_sunday"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_sunday" />
+
+                <CheckBox
+                    android:id="@+id/chk_tuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/check_box_size"
+                    android:buttonTint="@color/coffe_red"
+                    android:text="Tuesday"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/chk_thursday"
+                    app:layout_constraintStart_toEndOf="@+id/chk_saturday"
+                    app:layout_constraintTop_toTopOf="@+id/chk_saturday" />
+
+                <CheckBox
+                    android:id="@+id/chk_wednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/check_box_size"
+                    android:buttonTint="@color/coffe_red"
+                    android:text="Wednesday"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/chk_tuesday"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_tuesday" />
+
+                <CheckBox
+                    android:id="@+id/chk_thursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/check_box_size"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:buttonTint="@color/coffe_red"
+                    android:text="Thursday"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/chk_tuesday" />
+
+                <CheckBox
+                    android:id="@+id/chk_friday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/check_box_size"
+                    android:buttonTint="@color/coffe_red"
+                    android:text="Friday"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@+id/chk_thursday"
+                    app:layout_constraintTop_toBottomOf="@+id/chk_thursday" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textView313"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Seating Capacity"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/service_time_layout" />
+
+            <EditText
+                android:id="@+id/seating_capacity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="40"
+                android:inputType="numberDecimal"
+                android:maxLength="11"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView313" />
+
+            <TextView
+                android:id="@+id/textView414"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Current Brand Using"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seating_capacity" />
+
+            <RelativeLayout
+                android:id="@+id/spinner_current_brand_relativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_marginTop="8dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_lay"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView414">
+
+                <Spinner
+                    android:id="@+id/spinner_current_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/ic_dropdown"
+                    android:backgroundTint="@color/coffe_red" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/other_brand_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Please Specify Other Brand"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_current_brand_relativeLayout" />
+
+            <EditText
+                android:id="@+id/other_brand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="Brand Name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/other_brand_text" />
+
+            <TextView
+                android:id="@+id/textView415"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Sourcing Price(price per unit-1kg)"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/other_brand" />
+
+            <EditText
+                android:id="@+id/sourcing_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="1350"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView415" />
+
+
+            <TextView
+                android:id="@+id/textView416"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Sourcing Quantity(kg)"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sourcing_price" />
+
+            <EditText
+                android:id="@+id/sourcing_quantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="15"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView416" />
+
+            <TextView
+                android:id="@+id/textView417"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Current Machine Using"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sourcing_quantity" />
+
+            <RelativeLayout
+                android:id="@+id/spinner_machine_relativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="8dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_lay"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView417">
+
+                <Spinner
+                    android:id="@+id/spinner_machine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/ic_dropdown"
+                    android:backgroundTint="@color/coffe_red" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/other_machine_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Please Specify Other Brand"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_machine_relativeLayout" />
+
+            <EditText
+                android:id="@+id/other_machine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="Machine Name"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/other_machine_text" />
+            <TextView
+                android:id="@+id/textView418"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Current Syrups Using"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/other_machine" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/syrups_layout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView418">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/syrupsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/textView315"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Average Sales(Per Day)"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/syrups_layout" />
+
+            <EditText
+                android:id="@+id/sales_per_day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="90"
+                android:inputType="numberDecimal"
+                android:maxLength="11"
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView315" />
+
+            <TextView
+                android:id="@+id/textView420"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Select Outlet Status"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sales_per_day" />
+
+            <RelativeLayout
+                android:id="@+id/spinner_status_relativeLayout"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_27sdp"
+                android:layout_marginTop="8dp"
+                android:layout_weight=".28"
+                android:background="@drawable/spinner_lay"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView420">
+                <Spinner
+                    android:id="@+id/spinner_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+                <ImageView
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:background="@drawable/ic_dropdown"
+                    android:backgroundTint="@color/coffe_red" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Remark"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_status_relativeLayout" />
+
+            <EditText
+                android:id="@+id/remark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:hint="Remark....."
+                android:textColor="@color/black"
+                android:textColorHint="@color/ash"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView40" />
+
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Locate This Outlet"
+                android:textColor="@color/coffe_red"
+                android:textSize="@dimen/text_label_tittle_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/takeGpsChk"
+                app:layout_constraintBottom_toBottomOf="@id/takeGpsChk"
+                />
+
+            <CheckBox
+                android:id="@+id/takeGpsChk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/coffe_red"
+                android:buttonTint="@color/coffe_red"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/_8sdp"
+                app:layout_constraintTop_toBottomOf="@+id/remark"
+                app:layout_constraintStart_toEndOf="@+id/textView41"
+                />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submitBtn"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/ic_login_btn"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/takeGpsChk" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

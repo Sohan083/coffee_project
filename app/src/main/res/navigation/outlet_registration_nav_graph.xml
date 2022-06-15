@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outlet_registration_nav_graph"
+    app:startDestination="@id/outletRegistrationFragment">
+
+    <fragment
+        android:id="@+id/outletRegistrationFragment"
+        android:name="com.example.coffeeproject.ui.outletregistration.OutletRegistrationFragment"
+        android:label="Outlet Registration" >
+        <action
+            android:id="@+id/action_outletRegistrationFragment_to_pictureFragment"
+            app:destination="@id/pictureFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/pictureFragment"
+        android:name="com.example.coffeeproject.ui.outletregistration.FragmentPicture"
+        android:label="Outlet Registration" />
+</navigation>

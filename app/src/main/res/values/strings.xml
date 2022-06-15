@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Park-rd BP</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_pos_registration">Outlet Registration</string>
+    <string name="menu_outlet_activity">Outlet Activity</string>
+    <string name="menu_logout">Log Out</string>
+    <string name="menu_attendance">Attendance</string>
+    <string name="take_image_done">Image Captured</string>
+
+    <string name="version">1.3</string>
+    <string name="credit">©Interspeed Data Science Lab</string>
+
+
+    <string name="checkIn_warning">\"Check In\" means you are currently present at the outlet. Please be sure you are at the right place and write the reason why you are here.</string>
+
+</resources>

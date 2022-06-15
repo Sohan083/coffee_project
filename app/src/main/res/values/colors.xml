@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="ash">#B4B2B2</color>
+    <color name="light_orange">#ECA337</color>
+
+    <color name="skitto_pink">#f5038d</color>
+    <color name="skitto_ash_black">#262161</color>
+    <color name="skitto_purple">#6f00b6</color>
+    <color name="back_ash">#f2f2f2</color>
+    <color name="coffe_red">#E30D13</color>
+    <color name="green">#3EA307</color>
+</resources>
